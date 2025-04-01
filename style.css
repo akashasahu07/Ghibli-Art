@@ -10,16 +10,17 @@ body {
     align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    background-color: #151f28;
+    background: linear-gradient(120deg, #5d5d01, #9655ff, #5c0211);
 }
 
 .container {
     position: relative;
-    width: 550px;
-    height: 300px;
+    width: 50vw;
+    height: 50vh;
     margin: 50px;
     cursor: pointer;
     box-shadow: 0px 0px 10px #fff;
+    border-radius: 10px;
 }
 
 .container .image {
@@ -50,6 +51,7 @@ body {
     background: white;
     z-index: 1000;
     transition: 1.5s;
+    border-radius: 5px;
 }
 
 .container:hover::before {
@@ -64,4 +66,10 @@ body {
 .container:hover .image:nth-child(2) {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: 1.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90vw;
+    }
 }
